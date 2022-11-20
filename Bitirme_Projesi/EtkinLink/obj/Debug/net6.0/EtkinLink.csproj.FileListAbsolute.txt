@@ -1,0 +1,14 @@
+C:\Users\User\Desktop\.NET Eğitimleri\Bitirme_Projesi\EtkinLink\bin\Debug\net6.0\EtkinLink.deps.json
+C:\Users\User\Desktop\.NET Eğitimleri\Bitirme_Projesi\EtkinLink\bin\Debug\net6.0\EtkinLink.runtimeconfig.json
+C:\Users\User\Desktop\.NET Eğitimleri\Bitirme_Projesi\EtkinLink\bin\Debug\net6.0\EtkinLink.dll
+C:\Users\User\Desktop\.NET Eğitimleri\Bitirme_Projesi\EtkinLink\bin\Debug\net6.0\EtkinLink.pdb
+C:\Users\User\Desktop\.NET Eğitimleri\Bitirme_Projesi\EtkinLink\obj\Debug\net6.0\EtkinLink.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\.NET Eğitimleri\Bitirme_Projesi\EtkinLink\obj\Debug\net6.0\EtkinLink.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\.NET Eğitimleri\Bitirme_Projesi\EtkinLink\obj\Debug\net6.0\EtkinLink.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\.NET Eğitimleri\Bitirme_Projesi\EtkinLink\obj\Debug\net6.0\EtkinLink.AssemblyInfo.cs
+C:\Users\User\Desktop\.NET Eğitimleri\Bitirme_Projesi\EtkinLink\obj\Debug\net6.0\EtkinLink.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\.NET Eğitimleri\Bitirme_Projesi\EtkinLink\obj\Debug\net6.0\EtkinLink.dll
+C:\Users\User\Desktop\.NET Eğitimleri\Bitirme_Projesi\EtkinLink\obj\Debug\net6.0\refint\EtkinLink.dll
+C:\Users\User\Desktop\.NET Eğitimleri\Bitirme_Projesi\EtkinLink\obj\Debug\net6.0\EtkinLink.pdb
+C:\Users\User\Desktop\.NET Eğitimleri\Bitirme_Projesi\EtkinLink\obj\Debug\net6.0\EtkinLink.genruntimeconfig.cache
+C:\Users\User\Desktop\.NET Eğitimleri\Bitirme_Projesi\EtkinLink\obj\Debug\net6.0\ref\EtkinLink.dll

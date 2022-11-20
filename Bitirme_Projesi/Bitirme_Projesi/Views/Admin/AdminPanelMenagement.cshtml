@@ -1,0 +1,50 @@
+﻿@model List<CityViewModel>
+
+@{
+    Layout = "_Layout1";
+}
+                          
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AdminPanelMenagement</title>
+</head>
+<body>
+   @* @Html.ActionLink("Activities","AdminPanelMenagement2","Admin")
+    @Html.ActionLink("City & Category","AdminPanelMenagement","Admin")*@
+       <div class="sarmal">
+        <div class="panel panel-default">
+            <div class="panel-heading">Add City</div>
+            <div class="panel-body">
+               <form method="post" action="/Admin/AdminPanelMenagement">
+                    <div class="form-group">
+                        <input name="City" type ="text" class="form-control" />
+                    </div>
+                    <br />
+                    <input type="submit" class="btn btn-primary" value ="Add">
+                </form>
+            </div>
+        </div>
+    </div>
+    <br>
+    <table class="table table-bordered table-hover table-striped">
+    <tr>
+        <th>
+            City
+        </th>
+    </tr>
+      @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.City
+            </td>
+        </tr>
+    }
+    </table>
+
+  
+</body>
+</html>

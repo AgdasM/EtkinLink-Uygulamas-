@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EtkinLink", "EtkinLink\EtkinLink.csproj", "{FCD05EB6-CDAA-404D-9B41-EDCE767FE0A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bitirme_Projesi", "Bitirme_Projesi\Bitirme_Projesi.csproj", "{721FB99C-7676-4CDF-A634-FB9B2A9EEC1C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCD05EB6-CDAA-404D-9B41-EDCE767FE0A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCD05EB6-CDAA-404D-9B41-EDCE767FE0A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCD05EB6-CDAA-404D-9B41-EDCE767FE0A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCD05EB6-CDAA-404D-9B41-EDCE767FE0A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{721FB99C-7676-4CDF-A634-FB9B2A9EEC1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{721FB99C-7676-4CDF-A634-FB9B2A9EEC1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{721FB99C-7676-4CDF-A634-FB9B2A9EEC1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{721FB99C-7676-4CDF-A634-FB9B2A9EEC1C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85903FBC-9C57-4AFD-BBC4-27379049735C}
+	EndGlobalSection
+EndGlobal

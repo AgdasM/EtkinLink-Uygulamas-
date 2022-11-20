@@ -1,0 +1,116 @@
+﻿@model CreateEventViewModels
+@{
+    ViewData["Title"] = "CreateEvent";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h1>Create Event</h1>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UserSingin</title>
+</head>
+<body>
+    <div class="sarmal">
+        <div class="panel panel-default">
+            <div class="panel-heading"></div>
+            <div class="panel-body">
+
+                @ViewBag.Message
+                @using (Html.BeginForm("CreateEvent", "MemberShip", FormMethod.Post))
+                {
+                    <div class="form-group">
+                        <label class="col-md-4">Activity Name : </label>
+
+                        <input name="ActivityName" type="text" class="col-md-8" />
+
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label class="col-md-4">Activity Date : </label>
+
+                        <input name="ActivityDate" type="text" class="col-md-8" />
+                        
+                        <div class="text-danger">YYYY-MM-DD Formatında tarih giriniz </div>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label class="col-md-4">Activity Dead Line : </label>
+                        <input name="ActivityDeadLine" type="text" class="col-md-8" />
+                        <div class="text-danger">YYYY-MM-DD Formatında tarih giriniz </div>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label class="col-md-4">Explanation : </label>
+                        <input name="Explanation" type="text" class="col-md-8" />
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label class="col-md-4">City : </label>
+                        @{
+                            List<SelectListItem> lst = new List<SelectListItem>();
+                            foreach (var item in Model.City)
+                            {
+                                lst.Add(new SelectListItem { Text=item.City, Value = item.CityID.ToString() });
+                            }
+                        }
+                        @Html.DropDownListFor(x=>x.City, lst,"-- Choose City --",new { @class = "col-md-8"})
+
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label class="col-md-4">Address : </label>
+                        <input name="Address" type="text" class="col-md-8" />
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label class="col-md-4">Quota : </label>
+                        <input name="Quota" type="text" class="col-md-8" />
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label class="col-md-4">Ticket : </label>
+
+
+                        @{
+                            List<SelectListItem> lst2 = new List<SelectListItem>();
+
+                            lst2.Add(new SelectListItem { Text="No", Value = "False" });
+                            lst2.Add(new SelectListItem { Text="Yes", Value = "True" });
+                        }
+                        @Html.DropDownListFor(x=>x.Ticket,lst2,"-- Chose Ticket Y/N --",new {@class="col-md-8"})
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label class="col-md-4">Category : </label>
+                        @{
+                            List<SelectListItem> lst1 = new List<SelectListItem>();
+                            foreach (var item in Model.Category)
+                            {
+                                lst1.Add(new SelectListItem { Text=item.Category, Value = item.CategoryID.ToString() });
+                            }
+                        }
+                        @Html.DropDownListFor(x=>x.Category, lst1,"-- Choose Category --",new { @class = "col-md-8"})
+
+
+                    </div>
+                    <br />
+
+                    <div class="form-group">
+                        <label class="col-md-4">Ticket Price : </label>
+                        <input name="TicketPrice" type="text" class="col-md-8" value="0" />
+                        <div class="text-danger">Etkinlink biletsiz ise değer girmeyiniz !!!</div>
+                    </div>
+
+                    <br />
+                    <input type="submit" class="btn btn-primary" value="Login">
+                }
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

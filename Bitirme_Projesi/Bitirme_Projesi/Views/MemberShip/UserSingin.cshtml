@@ -1,0 +1,45 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UserSingin</title>
+</head>
+<body>
+    <div class="sarmal">
+        <div class="panel panel-default">
+            <div class="panel-heading">User Sing-up</div>
+            <div class="panel-body">
+                 @ViewBag.Message
+                @using (Html.BeginForm("UserSingin", "MemberShip", FormMethod.Post))
+                {
+                    <div class="form-group">
+                    <span class="input-group-addon">Name : </span>
+                        <input name="Name" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                    <span class="input-group-addon">Surname : </span>
+                        <input name="Surname" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <span class="input-group-addon" >Mail : </span>
+                        <input name="Mail" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <span class="input-group-addon" >Password : </span>
+                        <input name="Password" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <span class="input-group-addon" >Password Again : </span>
+                        <input name="PasswordAgain" type="text" class="form-control" />
+                    </div>
+                    <br />
+                    <input type="submit" class="btn btn-primary" value="Login">
+                }
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

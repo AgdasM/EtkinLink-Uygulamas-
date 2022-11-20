@@ -1,0 +1,99 @@
+﻿@model List<ActivitiesViewModel>
+
+@{
+    
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AdminPanelMenagement2</title>
+</head>
+<body>
+
+    <table class="table table-bordered table-hover table-striped">
+        <tr>
+            <th>
+                ActivityName
+            </th>
+            <th>
+                Date
+            </th>
+            <th>
+                DeadLine
+            </th>
+            <th>
+                Explanation
+            </th>
+            <th>
+                City
+            </th>
+            <th>
+                Address
+            </th>
+            <th>
+                Quota
+            </th>
+            <th>
+                Ticket
+            </th>
+            <th>
+                Category
+            </th>
+            <th>
+                TicketPrice
+            </th>
+            <th>
+                Approve
+            </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.ActivityName
+                </td>
+ 
+                <td>
+                    @item.ActivityDate
+                </td>
+
+                <td>
+                    @item.ActivityDeadLine
+                </td>
+
+                <td>
+                    @item.Explanation
+                </td>
+
+                <td>
+                    @item.City
+                </td>
+
+                <td>
+                    @item.Address
+                </td>
+
+                <td>
+                    @item.Quota
+                </td>
+
+                <td>
+                    @item.Ticket
+                </td>
+                <td>
+                    @item.Category
+                </td>
+                <td>
+                    @item.TicketPrice
+                </td>
+                <td>
+                    @Html.ActionLink("Join", "JoinEvent", new { activityid = item.ActivityID,userid=item.UserID }, new { @class = "btn btn-warning placeholder-xs" })
+                </td>
+            </tr>
+        }
+    </table>
+
+</body>
+</html>

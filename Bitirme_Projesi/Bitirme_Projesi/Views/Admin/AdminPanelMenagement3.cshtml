@@ -1,0 +1,46 @@
+﻿@model List<CategoryViewModel>
+@{
+    Layout = "_Layout1";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AdminPanelMenagement3</title>
+</head>
+<body>
+    <div class="sarmal">
+        <div class="panel panel-default">
+            <div class="panel-heading">Add Cetagory</div>
+            <div class="panel-body">
+               <form method="post" action="/Admin/AdminPanelMenagement3">
+                     <div class="form-group">
+                        <input name="Category" type ="text" class="form-control" />
+                    </div>
+                    <br />
+                    <input type="submit" class="btn btn-primary" value ="Add"/>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br>
+    <table class="table table-bordered table-hover table-striped">
+    <tr>
+        <th>
+            Category
+        </th>
+    </tr>
+      @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Category
+            </td>
+        </tr>
+    }
+    </table>
+
+</body>
+</html>
