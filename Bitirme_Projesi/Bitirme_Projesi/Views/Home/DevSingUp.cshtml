@@ -1,0 +1,37 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Developer SingUp</title>
+</head>
+<body>
+    <div class="sarmal">
+        <div class="panel panel-default">
+            <div class="panel-heading">Developer Sing-up</div>
+            <div class="panel-body">
+                 @ViewBag.Token
+                @using (Html.BeginForm("DevSingUp", "Home", FormMethod.Post))
+                {
+                    <div class="form-group">
+                    <span class="input-group-addon">Mail : </span>
+                        <input name="Mail" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <span class="input-group-addon" >Password : </span>
+                        <input name="Password" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <span class="input-group-addon" >Site : </span>
+                        <input name="Site" type="text" class="form-control" />
+                    </div>
+                    <br />
+                    <input type="submit" class="btn btn-primary" value="Sing Up">
+                }
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -29,6 +29,10 @@ public partial class EtkinLinkContext : DbContext
 
     public virtual DbSet<UserTbl> UserTbls { get; set; }
 
+    public virtual DbSet<DevTBL> DevTBLs  { get; set; }
+
+    public virtual DbSet<EtkinlikGet_tbl> EtkinlikGet_Tbls { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseSqlServer("Server=.;Database=EtkinLink;Trusted_Connection=True;TrustServerCertificate=True");
@@ -71,6 +75,15 @@ public partial class EtkinLinkContext : DbContext
             entity.Property(e => e.Gmail).HasMaxLength(50);
             entity.Property(e => e.Password).HasMaxLength(50);
         });
+        modelBuilder.Entity<DevTBL>(entity =>
+        {
+            entity.HasKey(e => e.DevID);
+            entity.ToTable("DevTbl");
+            entity.Property(e => e.DevID).HasColumnName("DevID");
+            entity.Property(e => e.DevMail).HasMaxLength(50);
+            entity.Property(e => e.DevPassword).HasMaxLength(50);
+            entity.Property(e => e.DevSite).HasMaxLength(100);
+        });
 
         modelBuilder.Entity<CategoryTbl>(entity =>
         {
@@ -90,6 +103,16 @@ public partial class EtkinLinkContext : DbContext
 
             entity.Property(e => e.CityId).HasColumnName("CityID");
             entity.Property(e => e.City).HasMaxLength(25);
+        });
+        modelBuilder.Entity<EtkinlikGet_tbl>(entity =>
+        {
+            entity.HasKey(e => e.ID);
+
+            entity.ToTable("EtkinlikGet_tbl");
+
+            entity.Property(e => e.ID).HasColumnName("ID");
+            entity.Property(e => e.EtkinlikAdı).HasMaxLength(100);
+            entity.Property(e => e.EtkinlikFiyatı).HasColumnType("money");
         });
 
         modelBuilder.Entity<DeleteMessageTbl>(entity =>

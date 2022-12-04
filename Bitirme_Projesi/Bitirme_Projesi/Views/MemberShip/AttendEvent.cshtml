@@ -1,7 +1,7 @@
 ﻿@model List<ActivitiesViewModel>
 
 @{
-    
+
     Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
@@ -47,6 +47,9 @@
             <th>
                 Approve
             </th>
+            <th>
+                Buy
+            </th>
         </tr>
         @foreach (var item in Model)
         {
@@ -54,7 +57,7 @@
                 <td>
                     @item.ActivityName
                 </td>
- 
+
                 <td>
                     @item.ActivityDate
                 </td>
@@ -90,6 +93,17 @@
                 </td>
                 <td>
                     @Html.ActionLink("Join", "JoinEvent", new { activityid = item.ActivityID,userid=item.UserID }, new { @class = "btn btn-warning placeholder-xs" })
+                </td>
+                <td>
+                    @if (item.TicketPrice != null)
+                    {
+                        @Html.ActionLink("Buy", "SendEtkinlik","Home", new { etkinlikadı = item.ActivityName,etkinlikfiyat=item.TicketPrice }, new { @class = "btn btn-warning placeholder-xs" })
+
+                    }
+                    else
+                    {
+                        <>Free Event</>
+                    }
                 </td>
             </tr>
         }
